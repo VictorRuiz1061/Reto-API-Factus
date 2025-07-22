@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 import InicioSecion from "./components/pages/inicioSesion";
@@ -9,7 +8,6 @@ import NotFound from "./components/templates/Not404";
 
 function App() {
   return (
-    <AuthProvider>
       <Routes>
         <Route path="/" element={<InicioSecion />} />
         
@@ -19,7 +17,6 @@ function App() {
         {/* Ruta 404 */}
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </AuthProvider>
   );
 }
 
